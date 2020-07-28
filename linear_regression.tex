@@ -5,12 +5,12 @@ $y_i = \beta_1 x_{i1}+...+\beta_p x_{ip} + \epsilon_i$ (note: $x_{i1}\equiv 1$, 
 $\hat \sigma^2 \approx \frac 1 {n-p}RSS$
 also if error Gaussian then: $\hat Y \sim \mathcal{N}_n(X\beta, \sigma^2 P)$, error\\
 $e \sim \mathcal{N}_n(0, \sigma^2(I-P))$,
-$\hat \sigma^2 \sim {\sigma^2 }/{(n-p)}\cdot X_{n-p}$
+$\hat \sigma^2 \sim {\sigma^2 }/{(n-p)}\cdot \chi_{n-p}$
 where $P=X(X^\top X)^{-1}X^\top $
 
 \textbf{Categorical Variables:} 
 For two levels:$y_i = \beta_1 x_{i1}+...+\beta_p x_{ip} + \lambda d_{is} + \epsilon_i$ 
-so if $i$ is in category, then $d_{is}=1$ else $d_{is}=0$. This acts as a different intercept ($E(y_i)-E(y_j)=\lambda$). If more categories, add more dummy variables.
+so if $i$ is in category, then $d_{is}=1$ else $d_{is}=0$. This acts as a different intercept ($E(y_i)-E(y_j)=\lambda$). If $k$ categories, then use $k-1$ dummy variables.
 
 \textbf{Interaction:} dummy can also influence slope: add term $\delta d_i x_i$, can influence interaction between predictors: add term $\delta x_{i2} x_{i3}$, can influence other categorical variable: add term $\delta d_{i1}d_{i2}$.
 
